@@ -4,7 +4,7 @@
 
 export PrinterWizard=$(cat <<End_of_Text
 
-<window title="`gettext $"Software Wizard"`" window-position="1">
+<window title="`gettext $"Printer Wizard"`" window-position="1">
 
 <vbox>
   <frame>
