@@ -49,14 +49,16 @@ def install_pkg_antix (name1, name2, url):
         os.system (wget_command)
         os.system ('dpkg -i ' + deb_file)
         os.system ('rm ' + deb_file)
-
-# Install yad
-install_pkg_antix ('yad', chr(45) + '1_i386.deb', 'http://debs.slavino.sk/pool/main/y/yad/')
 	
-src = dir_develop + '/ui-config-printer/usr_local_bin/config-printer.sh'
-dest = '/usr/local/bin/config-printer.sh'
+src = dir_develop + '/ui-config-printer/usr_local_bin/config-printer.py'
+dest = '/usr/local/bin/config-printer.py'
 shutil.copyfile (src, dest)
 os.system ('chmod a+rx ' + dest)
+
+src = dir_develop + '/ui-config-printer/usr_share_applications/config-printer.desktop'
+dest = '/usr/share/applications/config-printer.desktop'
+shutil.copyfile (src, dest)
+
 
 print 'FINISHED ADDING SOFTWARE WIZARD'
 print '==============================='
