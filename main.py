@@ -26,10 +26,12 @@ else:
 
 # THIS IS THE SCRIPT FOR ADDING THE SWIFT LINUX CONFIGURATION SCRIPTS
 
-print '============================'
-print 'BEGIN ADDING SOFTWARE WIZARD'
+print '==========================='
+print 'BEGIN ADDING PRINTER WIZARD'
 
 import shutil, subprocess
+
+os.system ('apt-get install -qq system-config-printer')
 	
 src = dir_develop + '/ui-config-printer/usr_local_bin/config-printer.py'
 dest = '/usr/local/bin/config-printer.py'
@@ -41,5 +43,5 @@ dest = '/usr/share/applications/config-printer.desktop'
 shutil.copyfile (src, dest)
 
 
-print 'FINISHED ADDING SOFTWARE WIZARD'
-print '==============================='
+print 'FINISHED ADDING PRINTER WIZARD'
+print '=============================='
